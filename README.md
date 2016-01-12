@@ -24,7 +24,13 @@ all:
 	print getcwd()
 ```
 
-# Imported modules
+# Advanced
 
-The following code is automatically loaded by interpreter:
-* `from os import *`
+By default, the following code is run for each Python command: `from os import *`.
+
+You can set your startup code by setting PYTHONSTARTUP variable, for instance:
+```make
+include python.mk
+
+PYTHONSTARTUP = startup.py
+```

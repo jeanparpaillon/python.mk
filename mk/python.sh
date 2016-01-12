@@ -1,9 +1,14 @@
 #!/bin/sh
 
-startup=$(cat <<EOF 
+startup=$(if test -n $PYTHONSTARTUP -a -e $PYTHONSTARTUP; then
+	      cat $PYTHONSTARTUP;
+	  else cat <<EOF 
 from os import *
-from setuptool import *
-EOF
-       )
 
-/usr/bin/python -c "$startup; $@"
+EOF
+	  fi)
+
+code="$startup
+$@"
+
+/usr/bin/python -c "$code"

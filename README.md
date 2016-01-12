@@ -1,6 +1,19 @@
 python.mk - Use Python as your interpreter in GNU make
 ======================================================
 
+# Why ?
+
+Because it is possible. Anything else ?
+
+Joke apart, while GNU make is really good at declaring targets
+dependancies and dealing with them, writing generic rules, hacking
+existing Makefile or even parallel builds, you may want to use a more
+advanced programming language for writing rules, with the following
+advantages:
+* access to a huge library of tools
+* easier syntax for dealing with strings
+* ...
+
 # Get started
 
 Download `python.mk`:
@@ -20,8 +33,10 @@ Example:
 ```make
 include python.mk
 
+DIR = $(shell print getcwd())
+
 all:
-	print getcwd()
+	print "$(DIR)"
 ```
 
 # Advanced

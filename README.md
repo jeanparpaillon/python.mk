@@ -5,7 +5,7 @@ python.mk - Use Python as your interpreter in GNU make
 
 Download `python.mk`:
 ```
-$ curl -O python.mk https://raw.githubusercontent.com/jeanparpaillon/python.mk/master/python.mk
+$ curl https://raw.githubusercontent.com/jeanparpaillon/python.mk/master/python.mk > python.mk
 ```
 
 Run bootstrap target:

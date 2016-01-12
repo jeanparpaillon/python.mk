@@ -3,7 +3,7 @@ python.mk - Use Python as your interpreter in GNU make
 
 # Get started
 
-Download `python.mk':
+Download `python.mk`:
 ```
 $ curl -O python.mk https://raw.githubusercontent.com/jeanparpaillon/python.mk/master/python.mk
 ```
@@ -27,4 +27,4 @@ all:
 # Imported modules
 
 The following code is automatically loaded by interpreter:
-* `from os import *'
+* `from os import *`
